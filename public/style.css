@@ -3,23 +3,34 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-main {
-  background: #f8fff8;
-  padding: 2.5em 2em 2em 2em;
-  border-radius: 14px;
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 38, 0.12);
-  min-width: 350px;
-  max-width: 90vw;
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+nav li button {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav li button:hover,
+nav li button:focus {
+  background-color: #38b838;
+  color: white;
+  border-color: #38b838;
+  outline: none;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   color: #226e22;
   font-weight: 600;
 }
@@ -30,9 +41,11 @@ form {
   gap: 1em;
 }
 
+input[type="date"],
+input[type="time"],
 input[type="text"],
 input[type="password"] {
-  padding: 0.9em 1em;
+  padding: 0.4em 0.8em;
   border: 1px solid #b2e2b2;
   border-radius: 6px;
   font-size: 1em;
@@ -40,6 +53,8 @@ input[type="password"] {
   transition: border 0.2s;
 }
 
+input[type="date"]:focus,
+input[type="time"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
@@ -48,7 +63,7 @@ input[type="password"]:focus {
 }
 
 button[type="submit"] {
-  padding: 0.9em 1em;
+  padding: 0.5em 0.8em;
   border: none;
   border-radius: 6px;
   background: #38b838;
@@ -75,6 +90,113 @@ button[type="submit"]:focus {
   text-align: center;
 }
 
-.groups-view-inner {
-  padding: 0px 50px;
-  }
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.table-section {
+  flex: 1.5;
+  background: #ffffffc9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 300px;
+}
+
+.form-section {
+  flex: 1;
+  background: #f1fbf1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 280px;
+}
+
+.lessons-view {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.lessons-view .form-section {
+  flex: 0.8;
+  max-width: 150px;
+}
+
+.lessons-view .table-section {
+  flex: 2;
+  min-width: 200px;
+
+  max-height: 500px; /* обмеження по висоті */
+  overflow-y: auto;  /* вертикальний скролл */
+  padding-right: 8px; /* простір для скролбару */
+  border: 1px solid #ddd;
+}
+
+/*
+.lessons-view .table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lessons-view .table-section thead {
+  position: sticky;
+  top: 0;
+  background-color: #e8ffe8;
+  z-index: 1;
+}
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #e4f8e4;
+  color: #226e22;
+  font-weight: 600;
+}
+
+select {
+  padding: 0.3em 0.7em;
+  border: 1px solid #b2e2b2;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #f1fbf1;
+  transition: border 0.2s, background 0.2s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+select:focus {
+  outline: none;
+  border: 1.5px solid #61d461;
+  background-color: #ffffff;
+}
+
+.lessons-view .form-section form label {
+  margin-bottom: 0;
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.lessons-view .form-section form input,
+.lessons-view .form-section form select {
+  margin-bottom: 0.2em;
+  padding: 0.2em 0.5em;
+  font-size: 0.85em;
+  line-height: 1.1;
+}

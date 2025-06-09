@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
   document.body.innerHTML = `
     <div style="display: flex; height: 100vh; font-family: sans-serif;">
-      <nav style="width: 200px; background-color: #f0f0f0; padding: 1rem; box-shadow: 2px 0 5px rgba(0,0,0,0.1);">
+      <nav style="width: 130px; background-color: #f0f0f0; padding: 1rem; box-shadow: 2px 0 5px rgba(0,0,0,0.1);">
         <ul style="list-style: none; padding: 0;">
           <li><button id="groupsBtn" style="width: 100%; padding: 0.5rem;">Групи</button></li>
           <li><button id="subjectsBtn" style="width: 100%; padding: 0.5rem;">Предмети</button></li>

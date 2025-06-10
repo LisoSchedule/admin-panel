@@ -102,6 +102,9 @@ button[type="submit"]:focus {
   flex: 1.5;
   background: #ffffffc9;
   padding: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px; 
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   min-width: 300px;

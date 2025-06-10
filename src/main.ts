@@ -1,6 +1,6 @@
 import { renderGroupsView } from './views/groupsView.js';
 import { renderSubjectsView } from './views/subjectsView.js';
-import { renderClassroomsView } from './views/classroomsView.js';
+import { renderAudiencesView } from './views/audiencesView.js';
 import { renderTeachersView } from './views/teachersView.js';
 import { renderLessonsView } from './views/lessonsView.js';
 import { renderLessonsReccurrencesView } from './views/lessonsReccurrencesView.js';
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('classroomsBtn')!.addEventListener('click', () => {
-    renderClassroomsView(mainContent);
+    renderAudiencesView(mainContent);
   });
 
   document.getElementById('teachersBtn')!.addEventListener('click', () => {
